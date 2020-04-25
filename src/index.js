@@ -2,22 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { HashRouter } from "react-router-dom";
-import { configure } from 'mobx';
-import { Provider } from "mobx-react";
-
-const stores = {};
+import { BrowserRouter as Router } from "react-router-dom";
+import { configure } from "mobx";
 
 configure({
-  enforceActions: 'observed'
+  enforceActions: "observed",
 });
 
 ReactDOM.render(
-  <Provider {...stores}>
-    <HashRouter>
-      <App />
-    </HashRouter>
-  </Provider>,
+  <Router>
+    <App />
+  </Router>,
   document.getElementById("root")
 );
 
