@@ -4,7 +4,7 @@ import { observer } from "mobx-react-lite";
 import "./Home.css";
 import AppStore from "../../stores/AppStore";
 import profilPhoto from "../../styles/images/profil.jpeg";
-import { Linkedin, GitHub, Twitter } from "react-feather";
+import {Twitter, Github, LinkedinSquare} from '@styled-icons/boxicons-logos'
 
 const Home = observer(() => {
   const appStore = useContext(AppStore);
@@ -20,7 +20,7 @@ const Home = observer(() => {
           </span>
         </h1>
         <h1 className="header">
-          I am Ömral Cörüt.&nbsp;
+          I am <span className="name">Ömral Cörüt</span>&nbsp;
           <span role="img" aria-label="developer">
             🧑‍💻
           </span>
@@ -38,32 +38,33 @@ const Home = observer(() => {
           <span role="img" aria-label="phone">
             📱
           </span>
-          &nbsp;from Turkey&nbsp;
+          &nbsp;from <span className="nation">Tu</span>rk
+          <span className="nation">ey</span>&nbsp;
           <span role="img" aria-label="turkey">
             🇹🇷
           </span>
         </p>
         <div>
           <a
-            href="https://www.linkedin.com/in/omralcrt/"
+            href="https://twitter.com/omralcrt"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Linkedin className="social-icon" />
+            <Twitter className="social-icon"/>
           </a>
           <a
             href="https://github.com/omralcrt"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHub className="social-icon" />
+            <Github className="social-icon"/>
           </a>
           <a
-            href="https://twitter.com/omralcrt"
+            href="https://www.linkedin.com/in/omralcrt/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter className="social-icon" />
+            <LinkedinSquare className="social-icon"/>
           </a>
         </div>
       </div>

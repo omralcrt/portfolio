@@ -18,10 +18,18 @@
   text-align: center;
 }
 
+.name {
+  color: #089eca;
+}
+
 .detail {
   font-size: 1.5rem;
   color: white;
   text-align: center;
+}
+
+.nation {
+  color: #e30a17;
 }
 
 .profile-photo {
@@ -33,5 +41,9 @@
   width: 30px;
   height: 30px;
   margin: 0px 1rem;
-  stroke: white;
+  color: white;
+}
+
+.social-icon:hover {
+  transform: translateY(-0.2rem);
 }
