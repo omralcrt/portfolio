@@ -1,27 +1,42 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { observer } from "mobx-react-lite";
-import { Menu } from "semantic-ui-react";
-import "./Header.css"
-import AppStore from "../../stores/AppStore"
+import "./Header.css";
+import AppStore from "../../stores/AppStore";
 
 const Header = observer(() => {
   const appStore = useContext(AppStore);
   return (
-    <Menu inverted pointing secondary>
-      <Menu.Item as={Link} to="/" active={appStore.activePage === "home"}>
+    <div className="menu">
+      <NavLink
+        className="menu-item"
+        activeClassName={appStore.activePage === "home" ? "active" : ""}
+        to="/"
+      >
         Home
-      </Menu.Item>
-      <Menu.Item as={Link} to="/skills" active={appStore.activePage === "skills"}>
+      </NavLink>
+      <NavLink
+        className="menu-item"
+        activeClassName={appStore.activePage === "skills" ? "active" : ""}
+        to="/skills"
+      >
         Skills
-      </Menu.Item>
-      <Menu.Item as={Link} to="/projects" active={appStore.activePage === "projects"}>
+      </NavLink>
+      <NavLink
+        className="menu-item"
+        activeClassName={appStore.activePage === "projects" ? "active" : ""}
+        to="/projects"
+      >
         Projects
-      </Menu.Item>
-      <Menu.Item as={Link} to="/contact" active={appStore.activePage === "contact"}>
+      </NavLink>
+      <NavLink
+        className="menu-item"
+        activeClassName={appStore.activePage === "contact" ? "active" : ""}
+        to="/contact"
+      >
         Contact
-      </Menu.Item>
-    </Menu>
+      </NavLink>
+    </div>
   );
 });
 

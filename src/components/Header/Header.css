@@ -1,0 +1,29 @@
+.menu {
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(34, 36, 38, .15);
+    display: flex;
+}
+
+.menu-item {
+    color: rgba(255,255,255,.7) !important;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    margin: 0 0 -2px;
+    padding: .86em 1.14em;
+    border-bottom-width: 2px;
+    transition: color .1s ease;
+    line-height: 1;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: #fff !important;
+}
+
+.menu-item.active {
+    border-color: #fff;
+    font-weight: 700;
+    color: #fff !important;
+}
