@@ -4,7 +4,8 @@ import { observer } from "mobx-react-lite";
 import "./Home.css";
 import AppStore from "../../stores/AppStore";
 import profilPhoto from "../../styles/images/profil.jpeg";
-import {Twitter, Github, LinkedinSquare} from '@styled-icons/boxicons-logos'
+import { Twitter, Github, LinkedinSquare } from "@styled-icons/boxicons-logos";
+import { MailSend } from "@styled-icons/boxicons-regular";
 
 const Home = observer(() => {
   const appStore = useContext(AppStore);
@@ -50,21 +51,24 @@ const Home = observer(() => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Twitter className="social-icon"/>
+            <Twitter className="social-icon" />
           </a>
           <a
             href="https://github.com/omralcrt"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="social-icon"/>
+            <Github className="social-icon" />
           </a>
           <a
             href="https://www.linkedin.com/in/omralcrt/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <LinkedinSquare className="social-icon"/>
+            <LinkedinSquare className="social-icon" />
+          </a>
+          <a href="mailto:omralcrt@gmail.com" target="_blank" rel="noopener noreferrer">
+            <MailSend className="social-icon" />
           </a>
         </div>
       </div>
