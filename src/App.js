@@ -11,7 +11,7 @@ import Contact from "./pages/Contact/Contact";
 
 const App = observer(() => {
   return (
-    <div className="App">
+    <div className="bg-gray-800 min-h-screen flex flex-col">
       <Header />
       <Switch>
         <Route path="/contact" component={Contact} />
