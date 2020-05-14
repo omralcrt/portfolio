@@ -11,7 +11,7 @@ const Home = observer(() => {
   const appStore = useContext(AppStore);
   appStore.changeActivePage("home");
   return (
-    <div className="home flex items-center">
+    <div className="home flex items-center justify-center">
       <div className="flex flex-col items-center p-8">
         <img src={profilPhoto} className="w-56 rounded-full" alt="Avatar" />
         <h1 className="text-4xl text-white text-center my-3">
@@ -45,7 +45,7 @@ const Home = observer(() => {
             🇹🇷
           </span>
         </p>
-        <div>
+        <div className="mb-8">
           <a
             href="https://twitter.com/omralcrt"
             target="_blank"

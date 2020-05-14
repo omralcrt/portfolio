@@ -5,10 +5,36 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+    />
     <title>Ömral Cörüt Portfolio</title>
   </head>
   <body>
     <div id="root"></div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBX1ZoRAfFNj8_ERZOym9SYMYNRGAjl1Lg",
+        authDomain: "omralcorutportfolio.firebaseapp.com",
+        databaseURL: "https://omralcorutportfolio.firebaseio.com",
+        projectId: "omralcorutportfolio",
+        storageBucket: "omralcorutportfolio.appspot.com",
+        messagingSenderId: "940512231994",
+        appId: "1:940512231994:web:604b2cc570823514eaab03",
+        measurementId: "G-1TCC7BQX5E",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
   </body>
 </html>
