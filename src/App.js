@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, Route, withRouter } from "react-router-dom";
-import { observer } from "mobx-react-lite";
+import { Switch, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header/Header";
 
@@ -9,7 +8,7 @@ import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 
-const App = observer(() => {
+const App = () => {
   return (
     <div className="bg-gray-800 min-h-screen flex flex-col">
       <Header />
@@ -21,6 +20,6 @@ const App = observer(() => {
       </Switch>
     </div>
   );
-});
+};
 
-export default withRouter(App);
+export default App;

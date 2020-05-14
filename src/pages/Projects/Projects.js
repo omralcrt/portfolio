@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
-import { withRouter } from "react-router-dom";
-import { observer } from "mobx-react-lite";
+import React from "react";
 import "./Projects.css";
-import AppStore from "../../stores/AppStore"
 
-const Projects = observer(() => {
-  const appStore = useContext(AppStore);
-  appStore.changeActivePage("projects");
+const Projects = () => {
   return <div>Projects Page</div>;
-});
+};
 
-export default withRouter(Projects);
+export default Projects;

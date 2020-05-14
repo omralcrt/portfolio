@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Twitter",
+        "icon": "/SocialMediaIcons/twitter_icon.png",
+        "url": "https://twitter.com/omralcrt",
+        "newTab": true
+    },
+    {
+        "name": "Github",
+        "icon": "/SocialMediaIcons/github_icon.png",
+        "url": "https://github.com/omralcrt",
+        "newTab": true
+    },
+    {
+        "name": "Linkedin",
+        "icon": "/SocialMediaIcons/linkedin_icon.png",
+        "url": "https://www.linkedin.com/in/omralcrt/",
+        "newTab": true
+    },
+    {
+        "name": "Mail",
+        "icon": "/SocialMediaIcons/mail_icon.png",
+        "url": "mailto:omralcrt@gmail.com",
+        "newTab": false
+    }
+]

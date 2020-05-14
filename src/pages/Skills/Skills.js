@@ -1,20 +1,21 @@
-import React, { useState, useEffect, useContext } from "react";
-import { withRouter } from "react-router-dom";
-import { observer } from "mobx-react-lite";
+import React, { useState, useEffect } from "react";
 import "./Skills.css";
-import AppStore from "../../stores/AppStore";
 import SkillSection from "./components/SkillSection/SkillSection";
 
-const Skills = observer(() => {
-  const appStore = useContext(AppStore);
-  appStore.changeActivePage("skills");
-
+const Skills = () => {
   const [skillData, setSkillData] = useState([]);
 
   useEffect(() => {
-    fetch("https://omralcorutportfolio.firebaseio.com/skills.json")
+    const ac = new AbortController();
+    fetch("https://omralcorutportfolio.firebaseio.com/skills.json", {
+      signal: ac.signal,
+    })
       .then((response) => response.json())
-      .then((data) => setSkillData(data));
+      .then((data) => {
+        setSkillData(data);
+      })
+      .catch((err) => {});
+    return () => ac.abort();
   }, []);
 
   return (
@@ -26,6 +27,6 @@ const Skills = observer(() => {
       </div>
     </div>
   );
-});
+};
 
-export default withRouter(Skills);
+export default Skills;

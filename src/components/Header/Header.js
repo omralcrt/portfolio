@@ -1,38 +1,34 @@
-import React, { useContext } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { observer } from "mobx-react-lite";
 import "./Header.css";
-import AppStore from "../../stores/AppStore";
 
-const Header = observer(() => {
-  const appStore = useContext(AppStore);
+const Header = () => {
   return (
     <header className="sticky top-0 z-40 w-full bg-gray-800">
       <div className="menu">
-        <NavLink
-          className="menu-item"
-          activeClassName={appStore.activePage === "home" ? "active" : ""}
-          to="/"
-        >
+        <NavLink className="menu-item" activeClassName="active" exact to="/">
           Home
         </NavLink>
         <NavLink
           className="menu-item"
-          activeClassName={appStore.activePage === "skills" ? "active" : ""}
+          activeClassName="active"
+          exact
           to="/skills"
         >
           Skills
         </NavLink>
         <NavLink
           className="menu-item"
-          activeClassName={appStore.activePage === "projects" ? "active" : ""}
+          activeClassName="active"
+          exact
           to="/projects"
         >
           Projects
         </NavLink>
         <NavLink
           className="menu-item"
-          activeClassName={appStore.activePage === "contact" ? "active" : ""}
+          activeClassName="active"
+          exact
           to="/contact"
         >
           Contact
@@ -40,6 +36,6 @@ const Header = observer(() => {
       </div>
     </header>
   );
-});
+};
 
 export default Header;

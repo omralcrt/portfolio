@@ -1,13 +1,8 @@
-import React, { useContext } from "react";
-import { withRouter } from "react-router-dom";
-import { observer } from "mobx-react-lite";
+import React from "react";
 import "./Contact.css";
-import AppStore from "../../stores/AppStore"
 
-const Contact = observer(() => {
-  const appStore = useContext(AppStore);
-  appStore.changeActivePage("contact");
+const Contact = () => {
   return <div>Contact Page</div>;
-});
+};
 
-export default withRouter(Contact);
+export default Contact;

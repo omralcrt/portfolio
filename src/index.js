@@ -5,11 +5,6 @@ import "./index.css";
 import "./tailwind.generated.css";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
-import { configure } from "mobx";
-
-configure({
-  enforceActions: "observed",
-});
 
 ReactDOM.render(
   <Router>
