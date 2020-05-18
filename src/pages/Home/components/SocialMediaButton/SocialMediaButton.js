@@ -7,7 +7,7 @@ const SocialMediaButton = ({ socialMedia }) => {
         title={socialMedia.name}
         alt={socialMedia.name}
         src={socialMedia.icon}
-        className="w-8 h-8 mx-4 transform hover:-translate-y-1 duration-100"
+        className="w-6 h-6 mx-4 transform hover:-translate-y-1 duration-100"
         data-src={socialMedia.icon}
       />
     </a>
