@@ -19,7 +19,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <div className="skills flex items-center">
+    <div className="flex flex-1 items-center">
       <div className="flex flex-col w-full p-8">
         {skillData.map((skillSet, index) => {
           return <SkillSection skillGroup={skillSet} key={index} />;

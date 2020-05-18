@@ -5,7 +5,7 @@ import socialMediaData from "./SocialMedias.json";
 
 const Home = () => {
   return (
-    <div className="home flex items-center justify-center">
+    <div className="flex flex-1 items-center justify-center">
       <div className="flex flex-col items-center p-8">
         <img src="/profil.jpeg" className="w-56 rounded-full" alt="Avatar" />
         <h1 className="text-4xl text-white text-center my-3">
